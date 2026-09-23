@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 
-<title>UNIVERSAL V16 — NASA JPL SPACE SYSTEM</title>
+<title>UNIVERSAL V17 — NASA JPL SPACE SYSTEM</title>
 
 <style>
 *{
@@ -17,7 +17,7 @@ html,body{
   width:100%;
   height:100%;
   overflow:hidden;
-  background:#000;
+  background:#02050b;
   font-family:Arial,Helvetica,sans-serif;
   color:#fff;
 }
@@ -56,7 +56,6 @@ canvas{
   border-radius:14px;
   background:rgba(3,10,20,.72);
   backdrop-filter:blur(10px);
-  box-shadow:0 0 25px rgba(0,130,255,.12);
 }
 
 .brand b{
@@ -362,7 +361,6 @@ button.ctrl.active{
   }
 
   .jpl{
-    font-size:8px;
     display:none;
   }
 
@@ -393,7 +391,7 @@ button.ctrl.active{
 
     <div class="brand">
       <b>UNIVERSAL</b>
-      <span id="brandSubtitle">PREMIUM SPACE HUD • V16</span>
+      <span id="brandSubtitle">PREMIUM SPACE HUD • V17</span>
     </div>
 
     <div class="rightTop">
@@ -404,6 +402,7 @@ button.ctrl.active{
       </div>
 
       <div id="languageBox">
+
         <button class="langBtn active" data-lang="en">
           🇬🇧 ENGLISH
         </button>
@@ -411,6 +410,7 @@ button.ctrl.active{
         <button class="langBtn" data-lang="hi">
           🇮🇳 हिंदी
         </button>
+
       </div>
 
     </div>
@@ -568,30 +568,22 @@ button.ctrl.active{
 
         <div class="dataItem">
           <label id="lblDiameter">DIAMETER</label>
-          <strong id="diameter">
-            3,474.8 km
-          </strong>
+          <strong id="diameter">3,474.8 km</strong>
         </div>
 
         <div class="dataItem">
           <label id="lblGravity">GRAVITY</label>
-          <strong id="gravity">
-            1.62 m/s²
-          </strong>
+          <strong id="gravity">1.62 m/s²</strong>
         </div>
 
         <div class="dataItem">
           <label id="lblMass">MASS</label>
-          <strong id="mass">
-            7.346 × 10²² kg
-          </strong>
+          <strong id="mass">7.346 × 10²² kg</strong>
         </div>
 
         <div class="dataItem">
           <label id="lblType">TYPE</label>
-          <strong id="bodyType">
-            NATURAL SATELLITE
-          </strong>
+          <strong id="bodyType">NATURAL SATELLITE</strong>
         </div>
 
       </div>
@@ -604,7 +596,7 @@ button.ctrl.active{
       </div>
 
       <p id="weather">
-        Almost no atmosphere. The Moon has a very thin exosphere and its surface experiences extreme temperature changes.
+        Very thin exosphere. Surface conditions include extreme temperature variation.
       </p>
 
     </div>
@@ -616,7 +608,7 @@ button.ctrl.active{
       </div>
 
       <p id="history">
-        Apollo 11 achieved the first crewed lunar landing on July 20, 1969. Numerous robotic missions have followed.
+        Apollo 11 achieved the first crewed lunar landing on July 20, 1969.
       </p>
 
     </div>
@@ -628,7 +620,7 @@ button.ctrl.active{
       </div>
 
       <p id="fact">
-        The Moon is tidally locked to Earth, so nearly the same lunar hemisphere faces Earth.
+        The Moon is tidally locked to Earth.
       </p>
 
     </div>
@@ -667,117 +659,97 @@ let currentLanguage="en";
 const TEXT={
 
 en:{
-  subtitle:"PREMIUM SPACE HUD • V16",
+  subtitle:"PREMIUM SPACE HUD • V17",
   status:"SYSTEM ONLINE • REAL SOLAR SYSTEM MODEL",
   hint:"CLICK ANY PLANET OR MOON",
-
   speed:"TIME SPEED",
-
   play:"▶ PLAY",
   pause:"Ⅱ PAUSE",
   zoomIn:"＋ ZOOM",
   zoomOut:"－ ZOOM",
   reset:"↻ RESET",
   sound:"🔊 SOUND",
-
   soundReady:"DEEP SPACE AUDIO: READY",
   soundOn:"DEEP SPACE AUDIO: ON",
   soundOff:"DEEP SPACE AUDIO: OFF",
   soundUnavailable:"DEEP SPACE AUDIO: UNAVAILABLE",
-
   initializing:"INITIALIZING...",
   jplReady:"JPL EPHEMERIS READY",
   jplFallback:"NASA / JPL FALLBACK",
-
   dataSource:"DATA SOURCE",
   objectId:"OBJECT ID",
   lastUpdate:"LAST UPDATE",
   ephemeris:"EPHEMERIS",
-
   orbital:"ORBITAL PROFILE",
   fromParent:"FROM PARENT",
   orbitalPeriod:"ORBITAL PERIOD",
   orbitType:"ORBIT TYPE",
   system:"SYSTEM",
-
   physical:"PHYSICAL PROFILE",
   diameter:"DIAMETER",
   gravity:"GRAVITY",
   mass:"MASS",
   type:"TYPE",
-
   weather:"ATMOSPHERE / WEATHER",
   history:"HISTORY / EXPLORATION",
   fact:"QUICK FACT",
-
   fallback:"Fallback",
   jplEphemeris:"JPL Horizons"
 },
 
 hi:{
-  subtitle:"प्रीमियम स्पेस HUD • V16",
+  subtitle:"प्रीमियम स्पेस HUD • V17",
   status:"सिस्टम ऑनलाइन • वास्तविक सौर मंडल मॉडल",
   hint:"किसी भी ग्रह या उपग्रह पर क्लिक करें",
-
   speed:"समय की गति",
-
   play:"▶ चलाएँ",
   pause:"Ⅱ रोकें",
   zoomIn:"＋ ज़ूम",
   zoomOut:"－ ज़ूम",
   reset:"↻ रीसेट",
   sound:"🔊 ध्वनि",
-
   soundReady:"डीप स्पेस ऑडियो: तैयार",
   soundOn:"डीप स्पेस ऑडियो: चालू",
   soundOff:"डीप स्पेस ऑडियो: बंद",
   soundUnavailable:"डीप स्पेस ऑडियो: उपलब्ध नहीं",
-
   initializing:"शुरू हो रहा है...",
   jplReady:"JPL EPHEMERIS तैयार",
   jplFallback:"NASA / JPL FALLBACK",
-
   dataSource:"डेटा स्रोत",
   objectId:"ऑब्जेक्ट ID",
   lastUpdate:"अंतिम अपडेट",
   ephemeris:"एपिमेरिस",
-
   orbital:"कक्षीय जानकारी",
   fromParent:"मूल पिंड से दूरी",
   orbitalPeriod:"कक्षीय अवधि",
   orbitType:"कक्षा का प्रकार",
   system:"सिस्टम",
-
   physical:"भौतिक जानकारी",
   diameter:"व्यास",
   gravity:"गुरुत्वाकर्षण",
   mass:"द्रव्यमान",
   type:"प्रकार",
-
   weather:"वायुमंडल / मौसम",
   history:"इतिहास / अन्वेषण",
   fact:"महत्वपूर्ण तथ्य",
-
   fallback:"Fallback",
   jplEphemeris:"JPL Horizons"
 }
 
 };
 
-/* =========================================================
-   BODY TRANSLATION
-   ========================================================= */
-
 const TYPE_HI={
-
 "STAR":"तारा",
 "TERRESTRIAL PLANET":"स्थलीय ग्रह",
 "GAS GIANT":"गैस दानव",
 "ICE GIANT":"हिम दानव",
 "DWARF PLANET":"बौना ग्रह",
 "NATURAL SATELLITE":"प्राकृतिक उपग्रह"
-
 };
+
+/* =========================================================
+   HINDI SCIENTIFIC DESCRIPTIONS
+   ========================================================= */
 
 const DATA_HI={
 
@@ -788,25 +760,25 @@ fact:"सूर्य में सौर मंडल के कुल द्�
 },
 
 Mercury:{
-weather:"बहुत पतला एक्सोस्फियर। सतह का तापमान बहुत अधिक बदलता है।",
+weather:"बहुत पतला एक्सोस्फियर। सतह के तापमान में बहुत अधिक बदलाव होता है।",
 history:"Mariner 10 और NASA MESSENGER ने बुध का अध्ययन किया है। BepiColombo भी बुध का अध्ययन कर रहा है।",
 fact:"बुध सूर्य के सबसे निकट और सौर मंडल का सबसे छोटा ग्रह है।"
 },
 
 Venus:{
 weather:"बहुत घना कार्बन डाइऑक्साइड वातावरण और सल्फ्यूरिक एसिड के बादल।",
-history:"कई robotic missions ने शुक्र का अध्ययन किया है, जिनमें Magellan और Venera शामिल हैं।",
+history:"Magellan और Venera सहित कई robotic missions ने शुक्र का अध्ययन किया है।",
 fact:"शुक्र सौर मंडल का सबसे गर्म ग्रह है।"
 },
 
 Earth:{
-weather:"नाइट्रोजन और ऑक्सीजन वाला वातावरण। पानी, महासागर और वातावरण मिलकर पृथ्वी के मौसम को प्रभावित करते हैं।",
-history:"पृथ्वी का निर्माण लगभग 4.6 अरब वर्ष पहले हुआ। वर्तमान में यही एक ऐसा ज्ञात विश्व है जहाँ जीवन मौजूद है।",
-fact:"पृथ्वी पर सतह का प्रचुर मात्रा में तरल पानी मौजूद है।"
+weather:"नाइट्रोजन और ऑक्सीजन वाला वातावरण। महासागर और वातावरण पृथ्वी के मौसम को प्रभावित करते हैं।",
+history:"पृथ्वी का निर्माण लगभग 4.6 अरब वर्ष पहले हुआ। यह वर्तमान में जीवन वाला ज्ञात एकमात्र विश्व है।",
+fact:"पृथ्वी पर प्रचुर मात्रा में सतही तरल पानी मौजूद है।"
 },
 
 Moon:{
-weather:"बहुत पतला एक्सोस्फियर। सतह पर लगभग vacuum जैसी स्थिति, radiation और बहुत अधिक तापमान परिवर्तन होते हैं।",
+weather:"बहुत पतला एक्सोस्फियर। सतह पर लगभग vacuum जैसी स्थिति और अत्यधिक तापमान परिवर्तन होते हैं।",
 history:"Apollo 11 ने 20 जुलाई 1969 को पहला मानवयुक्त चंद्र लैंडिंग किया। इसके बाद अनेक robotic missions ने चंद्रमा का अध्ययन किया।",
 fact:"चंद्रमा पृथ्वी से tidal locked है, इसलिए लगभग हमेशा उसका एक ही भाग पृथ्वी की ओर रहता है।"
 },
@@ -830,7 +802,7 @@ fact:"शनि के rings मुख्यतः water ice और rocky materi
 },
 
 Uranus:{
-weather:"Hydrogen और helium के साथ methane। ऊपरी वातावरण बहुत ठंडा है और मौसमी बदलाव होते हैं।",
+weather:"Hydrogen और helium के साथ methane। ऊपरी वातावरण बहुत ठंडा है।",
 history:"Voyager 2 ने 1986 में Uranus का close flyby किया था।",
 fact:"Uranus अपने अत्यधिक axial tilt के कारण लगभग अपनी side पर घूमता हुआ प्रतीत होता है।"
 },
@@ -844,7 +816,7 @@ fact:"Neptune पर सौर मंडल की सबसे तेज़ pla
 Pluto:{
 weather:"पतला मौसमी वातावरण जिसमें nitrogen, methane और carbon monoxide पाए जाते हैं।",
 history:"NASA New Horizons ने 2015 में Pluto का पहला close flyby किया।",
-fact:"Pluto और Charon अपने barycenter के चारों ओर घूमते हैं, जो Pluto की सतह के बाहर है।"
+fact:"Pluto और Charon अपने barycenter के चारों ओर घूमते हैं।"
 },
 
 Phobos:{
@@ -860,20 +832,20 @@ fact:"Deimos मंगल का छोटा और अधिक दूर स�
 },
 
 Io:{
-weather:"बहुत पतला sulfur-dioxide वातावरण, जो volcanic activity और Jupiter के environment से प्रभावित होता है।",
+weather:"बहुत पतला sulfur-dioxide वातावरण और अत्यधिक volcanic activity।",
 history:"Voyager, Galileo, Cassini, New Horizons और Juno ने Io का अध्ययन किया है।",
 fact:"Io सौर मंडल का सबसे अधिक volcanic activity वाला ज्ञात world है।"
 },
 
 Europa:{
-weather:"बहुत पतला oxygen वातावरण और surface-generated particles।",
-history:"Galileo ने Europa का विस्तृत अध्ययन किया। NASA Europa Clipper mission Europa का अध्ययन करने के लिए बनाया गया है।",
-fact:"Europa की बर्फीली सतह के नीचे global subsurface ocean होने के मजबूत प्रमाण हैं।"
+weather:"बहुत पतला oxygen वातावरण।",
+history:"Galileo ने Europa का विस्तृत अध्ययन किया। Europa Clipper mission Europa का अध्ययन करने के लिए बनाया गया है।",
+fact:"Europa की बर्फीली सतह के नीचे subsurface ocean होने के मजबूत प्रमाण हैं।"
 },
 
 Ganymede:{
 weather:"बहुत पतला oxygen-related वातावरण।",
-history:"Galileo spacecraft ने Ganymede का अध्ययन किया और ESA JUICE mission भी Jovian system का अध्ययन कर रहा है।",
+history:"Galileo spacecraft ने Ganymede का अध्ययन किया। ESA JUICE mission भी Jovian system का अध्ययन कर रहा है।",
 fact:"Ganymede सौर मंडल का सबसे बड़ा moon है।"
 },
 
@@ -898,7 +870,7 @@ fact:"Rhea एक icy और heavily cratered Saturnian moon है।"
 Titan:{
 weather:"घना nitrogen-rich atmosphere जिसमें methane और complex organic chemistry है।",
 history:"Cassini-Huygens ने Titan का विस्तृत अध्ययन किया और Huygens lander 2005 में सतह पर उतरा।",
-fact:"Titan एकमात्र moon है जिसे dense atmosphere और stable surface liquids के लिए जाना जाता है।"
+fact:"Titan एक dense atmosphere और stable surface liquids वाला moon है।"
 },
 
 Iapetus:{
@@ -946,83 +918,453 @@ fact:"Charon Pluto के मुकाबले इतना बड़ा है
 };
 
 /* =========================================================
-   SCENE
+   SCIENTIFIC DATA
    ========================================================= */
 
-const scene=new THREE.Scene();
+const DATA={
 
-scene.background=
-  new THREE.Color(0x000103);
+Sun:{
+type:"STAR",
+parent:"Milky Way / Solar System",
+distance:"0 km from system center",
+period:"≈25–35 days rotation",
+orbit:"Solar-system central star",
+diameter:"1,392,700 km",
+gravity:"274 m/s²",
+mass:"1.989 × 10³⁰ kg",
+atmosphere:"Extremely hot plasma atmosphere. The visible surface is the photosphere; the outer atmosphere includes the corona.",
+history:"The Sun formed about 4.6 billion years ago and is the gravitational center of our planetary system.",
+fact:"The Sun contains more than 99% of the Solar System's mass."
+},
 
-const camera=
-  new THREE.PerspectiveCamera(
-    52,
-    innerWidth/innerHeight,
-    .1,
-    5000
-  );
+Mercury:{
+type:"TERRESTRIAL PLANET",
+parent:"Sun",
+distance:"57.9 million km average",
+period:"87.97 days",
+orbit:"Solar orbit",
+diameter:"4,879 km",
+gravity:"3.70 m/s²",
+mass:"3.301 × 10²³ kg",
+atmosphere:"Very thin exosphere. Surface temperatures vary dramatically.",
+history:"Mercury has been studied by Mariner 10 and MESSENGER; BepiColombo is studying the planet.",
+fact:"Mercury is the smallest planet and closest to the Sun."
+},
 
-camera.position.set(
-  235,145,265
-);
+Venus:{
+type:"TERRESTRIAL PLANET",
+parent:"Sun",
+distance:"108.2 million km average",
+period:"224.70 days",
+orbit:"Solar orbit",
+diameter:"12,104 km",
+gravity:"8.87 m/s²",
+mass:"4.867 × 10²⁴ kg",
+atmosphere:"Extremely dense carbon-dioxide atmosphere with sulfuric-acid clouds.",
+history:"Venus has been visited by numerous robotic missions including Magellan and Venera.",
+fact:"Venus is the hottest planet in the Solar System."
+},
 
-const renderer=
-  new THREE.WebGLRenderer({
-    antialias:true,
-    powerPreference:"high-performance"
-  });
+Earth:{
+type:"TERRESTRIAL PLANET",
+parent:"Sun",
+distance:"149.6 million km average",
+period:"365.256 days",
+orbit:"Solar orbit",
+diameter:"12,742 km",
+gravity:"9.81 m/s²",
+mass:"5.972 × 10²⁴ kg",
+atmosphere:"Nitrogen-oxygen atmosphere with water vapor and variable trace gases.",
+history:"Earth formed about 4.6 billion years ago. It is the only world currently known to support life.",
+fact:"Earth has abundant surface liquid water and is the only known world with life."
+},
 
-renderer.setPixelRatio(
-  Math.min(devicePixelRatio,2)
-);
+Moon:{
+type:"NATURAL SATELLITE",
+parent:"Earth",
+distance:"384,400 km from Earth",
+period:"27.3217 days",
+orbit:"Earth satellite orbit",
+diameter:"3,474.8 km",
+gravity:"1.62 m/s²",
+mass:"7.346 × 10²² kg",
+atmosphere:"Very thin exosphere. Surface conditions include vacuum-like pressure, radiation exposure and extreme temperature variation.",
+history:"Apollo 11 achieved the first crewed lunar landing on July 20, 1969. Numerous robotic missions have followed.",
+fact:"The Moon is tidally locked to Earth."
+},
 
-renderer.setSize(
-  innerWidth,
-  innerHeight
-);
+Mars:{
+type:"TERRESTRIAL PLANET",
+parent:"Sun",
+distance:"227.9 million km average",
+period:"686.98 days",
+orbit:"Solar orbit",
+diameter:"6,779 km",
+gravity:"3.71 m/s²",
+mass:"6.417 × 10²³ kg",
+atmosphere:"Thin atmosphere dominated by carbon dioxide, with dust storms and seasonal changes.",
+history:"Mars has been explored by Viking, Spirit, Opportunity, Curiosity and Perseverance.",
+fact:"Mars has the largest volcano and one of the largest canyon systems known."
+},
 
-renderer.outputColorSpace=
-  THREE.SRGBColorSpace;
+Jupiter:{
+type:"GAS GIANT",
+parent:"Sun",
+distance:"778.5 million km average",
+period:"11.86 years",
+orbit:"Solar orbit",
+diameter:"139,820 km",
+gravity:"24.79 m/s²",
+mass:"1.898 × 10²⁷ kg",
+atmosphere:"Mostly hydrogen and helium with powerful jet streams, storms and cloud bands.",
+history:"Pioneer, Voyager, Galileo and Juno spacecraft have studied Jupiter.",
+fact:"Jupiter is the largest planet."
+},
 
-renderer.toneMapping=
-  THREE.ACESFilmicToneMapping;
+Saturn:{
+type:"GAS GIANT",
+parent:"Sun",
+distance:"1.43 billion km average",
+period:"29.45 years",
+orbit:"Solar orbit",
+diameter:"116,460 km",
+gravity:"10.44 m/s²",
+mass:"5.683 × 10²⁶ kg",
+atmosphere:"Hydrogen and helium dominate with fast winds and storms.",
+history:"Pioneer 11, Voyager and Cassini-Huygens greatly expanded knowledge of Saturn.",
+fact:"Saturn's rings are made mostly of water ice and rocky material."
+},
 
-renderer.toneMappingExposure=1.15;
+Uranus:{
+type:"ICE GIANT",
+parent:"Sun",
+distance:"2.87 billion km average",
+period:"84.02 years",
+orbit:"Solar orbit",
+diameter:"50,724 km",
+gravity:"8.69 m/s²",
+mass:"8.681 × 10²⁵ kg",
+atmosphere:"Hydrogen, helium and methane. The upper atmosphere is extremely cold.",
+history:"Voyager 2 made the only close flyby of Uranus in 1986.",
+fact:"Uranus has an extreme axial tilt."
+},
 
-document.body.appendChild(renderer.domElement);
+Neptune:{
+type:"ICE GIANT",
+parent:"Sun",
+distance:"4.50 billion km average",
+period:"164.79 years",
+orbit:"Solar orbit",
+diameter:"49,244 km",
+gravity:"11.15 m/s²",
+mass:"1.024 × 10²⁶ kg",
+atmosphere:"Hydrogen, helium and methane with extremely fast winds.",
+history:"Voyager 2 made the only close flyby of Neptune in 1989.",
+fact:"Neptune has some of the fastest planetary winds measured."
+},
 
-const controls=
-  new OrbitControls(
-    camera,
-    renderer.domElement
-  );
+Pluto:{
+type:"DWARF PLANET",
+parent:"Sun",
+distance:"5.91 billion km average",
+period:"247.94 years",
+orbit:"Kuiper Belt / Solar orbit",
+diameter:"2,377 km",
+gravity:"0.62 m/s²",
+mass:"1.303 × 10²² kg",
+atmosphere:"Thin seasonal nitrogen atmosphere with methane and carbon monoxide.",
+history:"New Horizons performed the first close flyby of Pluto in 2015.",
+fact:"Pluto and Charon orbit a barycenter outside Pluto."
+},
 
-controls.enableDamping=true;
-controls.dampingFactor=.055;
-controls.minDistance=25;
-controls.maxDistance=900;
+Phobos:{
+type:"NATURAL SATELLITE",
+parent:"Mars",
+distance:"9,378 km from Mars center",
+period:"7.65 hours",
+orbit:"Mars satellite orbit",
+diameter:"≈22.4 km",
+gravity:"≈0.0057 m/s²",
+mass:"≈1.07 × 10¹⁶ kg",
+atmosphere:"No substantial atmosphere.",
+history:"Phobos has been photographed and studied by multiple Mars missions.",
+fact:"Phobos orbits Mars faster than Mars rotates."
+},
+
+Deimos:{
+type:"NATURAL SATELLITE",
+parent:"Mars",
+distance:"23,460 km from Mars center",
+period:"30.35 hours",
+orbit:"Mars satellite orbit",
+diameter:"≈12.4 km",
+gravity:"Very low",
+mass:"≈1.48 × 10¹⁵ kg",
+atmosphere:"No substantial atmosphere.",
+history:"Deimos has been observed by Mars orbiters and landers.",
+fact:"Deimos is the smaller and more distant moon of Mars."
+},
+
+Io:{
+type:"NATURAL SATELLITE",
+parent:"Jupiter",
+distance:"421,700 km from Jupiter center",
+period:"1.769 days",
+orbit:"Jupiter satellite orbit",
+diameter:"3,643 km",
+gravity:"1.80 m/s²",
+mass:"8.93 × 10²² kg",
+atmosphere:"Very thin sulfur-dioxide atmosphere with intense volcanic activity.",
+history:"Voyager, Galileo, Cassini, New Horizons and Juno observed Io.",
+fact:"Io is the most volcanically active known world."
+},
+
+Europa:{
+type:"NATURAL SATELLITE",
+parent:"Jupiter",
+distance:"671,100 km from Jupiter center",
+period:"3.551 days",
+orbit:"Jupiter satellite orbit",
+diameter:"3,122 km",
+gravity:"1.31 m/s²",
+mass:"4.80 × 10²² kg",
+atmosphere:"Very thin oxygen atmosphere.",
+history:"Galileo studied Europa extensively. Europa Clipper is designed to investigate it.",
+fact:"Europa has strong evidence for a subsurface ocean."
+},
+
+Ganymede:{
+type:"NATURAL SATELLITE",
+parent:"Jupiter",
+distance:"1.07 million km from Jupiter center",
+period:"7.155 days",
+orbit:"Jupiter satellite orbit",
+diameter:"5,268 km",
+gravity:"1.43 m/s²",
+mass:"1.482 × 10²³ kg",
+atmosphere:"Very thin oxygen-related atmosphere.",
+history:"Galileo studied Ganymede and ESA JUICE is studying the Jovian system.",
+fact:"Ganymede is the largest moon in the Solar System."
+},
+
+Callisto:{
+type:"NATURAL SATELLITE",
+parent:"Jupiter",
+distance:"1.883 million km from Jupiter center",
+period:"16.689 days",
+orbit:"Jupiter satellite orbit",
+diameter:"4,821 km",
+gravity:"1.24 m/s²",
+mass:"1.076 × 10²³ kg",
+atmosphere:"Extremely thin carbon-dioxide/oxygen-related environment.",
+history:"Voyager and Galileo provided major observations.",
+fact:"Callisto is heavily cratered."
+},
+
+Enceladus:{
+type:"NATURAL SATELLITE",
+parent:"Saturn",
+distance:"238,000 km from Saturn center",
+period:"1.370 days",
+orbit:"Saturn satellite orbit",
+diameter:"504.2 km",
+gravity:"0.113 m/s²",
+mass:"1.08 × 10²⁰ kg",
+atmosphere:"Very thin water-vapor-rich environment with active south-polar plumes.",
+history:"Cassini discovered evidence of a subsurface ocean.",
+fact:"Enceladus ejects water-rich material through south-polar plumes."
+},
+
+Rhea:{
+type:"NATURAL SATELLITE",
+parent:"Saturn",
+distance:"527,000 km from Saturn center",
+period:"4.518 days",
+orbit:"Saturn satellite orbit",
+diameter:"1,528 km",
+gravity:"0.264 m/s²",
+mass:"2.31 × 10²¹ kg",
+atmosphere:"Extremely thin oxygen and carbon-dioxide exosphere.",
+history:"Voyager and Cassini studied Rhea.",
+fact:"Rhea is an icy, heavily cratered moon."
+},
+
+Titan:{
+type:"NATURAL SATELLITE",
+parent:"Saturn",
+distance:"1.222 million km from Saturn center",
+period:"15.945 days",
+orbit:"Saturn satellite orbit",
+diameter:"5,150 km",
+gravity:"1.35 m/s²",
+mass:"1.345 × 10²³ kg",
+atmosphere:"Dense nitrogen-rich atmosphere with methane and complex organic chemistry.",
+history:"Cassini-Huygens explored Titan extensively; Huygens landed in 2005.",
+fact:"Titan has a dense atmosphere and stable surface liquids."
+},
+
+Iapetus:{
+type:"NATURAL SATELLITE",
+parent:"Saturn",
+distance:"3.56 million km from Saturn center",
+period:"79.33 days",
+orbit:"Saturn satellite orbit",
+diameter:"1,469 km",
+gravity:"0.223 m/s²",
+mass:"1.81 × 10²¹ kg",
+atmosphere:"No substantial atmosphere.",
+history:"Voyager and Cassini obtained detailed observations.",
+fact:"Iapetus has a striking two-tone surface."
+},
+
+Ariel:{
+type:"NATURAL SATELLITE",
+parent:"Uranus",
+distance:"191,000 km from Uranus center",
+period:"2.520 days",
+orbit:"Uranus satellite orbit",
+diameter:"1,158 km",
+gravity:"≈0.27 m/s²",
+mass:"≈1.35 × 10²¹ kg",
+atmosphere:"No substantial atmosphere.",
+history:"Voyager 2 obtained close observations of Ariel in 1986.",
+fact:"Ariel has extensive canyon systems."
+},
+
+Umbriel:{
+type:"NATURAL SATELLITE",
+parent:"Uranus",
+distance:"266,000 km from Uranus center",
+period:"4.144 days",
+orbit:"Uranus satellite orbit",
+diameter:"1,169 km",
+gravity:"≈0.23 m/s²",
+mass:"≈1.17 × 10²¹ kg",
+atmosphere:"No substantial atmosphere.",
+history:"Voyager 2 photographed Umbriel.",
+fact:"Umbriel is one of Uranus's darkest major moons."
+},
+
+Titania:{
+type:"NATURAL SATELLITE",
+parent:"Uranus",
+distance:"436,000 km from Uranus center",
+period:"8.706 days",
+orbit:"Uranus satellite orbit",
+diameter:"1,578 km",
+gravity:"≈0.38 m/s²",
+mass:"≈3.53 × 10²¹ kg",
+atmosphere:"No substantial atmosphere.",
+history:"Voyager 2 provided the principal close observations.",
+fact:"Titania is the largest moon of Uranus."
+},
+
+Oberon:{
+type:"NATURAL SATELLITE",
+parent:"Uranus",
+distance:"583,000 km from Uranus center",
+period:"13.463 days",
+orbit:"Uranus satellite orbit",
+diameter:"1,523 km",
+gravity:"≈0.35 m/s²",
+mass:"≈3.01 × 10²¹ kg",
+atmosphere:"No substantial atmosphere.",
+history:"Voyager 2 photographed Oberon during its 1986 encounter.",
+fact:"Oberon is the outermost of Uranus's five major moons."
+},
+
+Triton:{
+type:"NATURAL SATELLITE",
+parent:"Neptune",
+distance:"354,800 km from Neptune center",
+period:"5.877 days",
+orbit:"Neptune satellite orbit",
+diameter:"2,707 km",
+gravity:"0.779 m/s²",
+mass:"2.14 × 10²² kg",
+atmosphere:"Very thin nitrogen atmosphere.",
+history:"Voyager 2 performed the only close flyby of Triton in 1989.",
+fact:"Triton has a retrograde orbit around Neptune."
+},
+
+Charon:{
+type:"NATURAL SATELLITE",
+parent:"Pluto",
+distance:"≈19,570 km from Pluto system barycenter",
+period:"6.387 days",
+orbit:"Pluto-Charon binary system",
+diameter:"1,212 km",
+gravity:"≈0.288 m/s²",
+mass:"1.586 × 10²¹ kg",
+atmosphere:"No substantial persistent atmosphere detected.",
+history:"New Horizons obtained close-up observations in 2015.",
+fact:"Charon is very large relative to Pluto."
+}
+
+};
 
 /* =========================================================
-   LIGHT
+   PLANETS — NATURAL COLORS
    ========================================================= */
 
-scene.add(
-  new THREE.AmbientLight(
-    0xffffff,.18
-  )
-);
+const PLANETS=[
 
-const sunLight=
-  new THREE.PointLight(
-    0xffffff,4.2,0,2
-  );
+{name:"Mercury",radius:2.8,orbit:24,color:"mercury",speed:.020},
+{name:"Venus",radius:3.7,orbit:35,color:"venus",speed:.014},
+{name:"Earth",radius:4.5,orbit:48,color:"earth",speed:.011},
+{name:"Mars",radius:3.8,orbit:62,color:"mars",speed:.009},
+{name:"Jupiter",radius:8.3,orbit:82,color:"jupiter",speed:.006},
+{name:"Saturn",radius:7.6,orbit:106,color:"saturn",speed:.0048},
+{name:"Uranus",radius:5.8,orbit:132,color:"uranus",speed:.0035},
+{name:"Neptune",radius:5.8,orbit:158,color:"neptune",speed:.0028},
+{name:"Pluto",radius:2.7,orbit:183,color:"pluto",speed:.002}
 
-sunLight.position.set(0,0,0);
+];
 
-scene.add(sunLight);
+const MOONS=[
+
+{name:"Moon",parent:"Earth",radius:1.15,orbit:6.5,speed:.035,color:"moon"},
+
+{name:"Phobos",parent:"Mars",radius:.55,orbit:5.5,speed:.055,color:"phobos"},
+{name:"Deimos",parent:"Mars",radius:.42,orbit:8,speed:.030,color:"deimos"},
+
+{name:"Io",parent:"Jupiter",radius:1.15,orbit:10.5,speed:.030,color:"io"},
+{name:"Europa",parent:"Jupiter",radius:1.05,orbit:13,speed:.024,color:"europa"},
+{name:"Ganymede",parent:"Jupiter",radius:1.35,orbit:16,speed:.018,color:"ganymede"},
+{name:"Callisto",parent:"Jupiter",radius:1.25,orbit:20,speed:.012,color:"callisto"},
+
+{name:"Enceladus",parent:"Saturn",radius:.58,orbit:10,speed:.030,color:"enceladus"},
+{name:"Rhea",parent:"Saturn",radius:.85,orbit:13,speed:.022,color:"rhea"},
+{name:"Titan",parent:"Saturn",radius:1.45,orbit:17,speed:.017,color:"titan"},
+{name:"Iapetus",parent:"Saturn",radius:.75,orbit:23,speed:.009,color:"iapetus"},
+
+{name:"Ariel",parent:"Uranus",radius:.65,orbit:9,speed:.026,color:"ariel"},
+{name:"Umbriel",parent:"Uranus",radius:.65,orbit:11,speed:.021,color:"umbriel"},
+{name:"Titania",parent:"Uranus",radius:.85,orbit:14,speed:.016,color:"titania"},
+{name:"Oberon",parent:"Uranus",radius:.82,orbit:17,speed:.012,color:"oberon"},
+
+{name:"Triton",parent:"Neptune",radius:1.0,orbit:10,speed:.018,color:"triton"},
+
+{name:"Charon",parent:"Pluto",radius:1.0,orbit:6.5,speed:.028,color:"charon"}
+
+];
+
+const orbitColors={
+
+Mercury:0xaaa39a,
+Venus:0xd8b77f,
+Earth:0x4d9ed8,
+Mars:0xb8583b,
+Jupiter:0xc09b78,
+Saturn:0xc9b17b,
+Uranus:0x7bcbd3,
+Neptune:0x4168c4,
+Pluto:0xa89482
+
+};
 
 /* =========================================================
-   TEXTURE ENGINE
+   TEXTURE ENGINE — NATURAL COLORS
    ========================================================= */
 
 function noise(x,y){
@@ -1060,242 +1402,499 @@ function makeTexture(type){
       const nx=x/size;
       const ny=y/size;
 
-      let r=120;
-      let g=120;
-      let b=120;
-
       const n=
         noise(
-          Math.floor(nx*45),
-          Math.floor(ny*45)
+          Math.floor(nx*55),
+          Math.floor(ny*55)
         );
 
       const n2=
         noise(
-          Math.floor(nx*100)+7,
-          Math.floor(ny*100)+11
+          Math.floor(nx*130)+17,
+          Math.floor(ny*130)+31
         );
 
-      if(type==="earth"){
+      let r=100;
+      let g=100;
+      let b=100;
 
-        r=28+25*n;
-        g=85+80*n;
-        b=145+70*n;
+      /* ---------------- MERCURY ---------------- */
+
+      if(type==="mercury"){
+
+        const crater=
+          n2>.84 ? 38:0;
+
+        r=135+45*n-crater;
+        g=132+42*n-crater;
+        b=125+38*n-crater;
+
+        if(n2>.94){
+          r-=25;
+          g-=25;
+          b-=25;
+        }
+      }
+
+      /* ---------------- VENUS ---------------- */
+
+      else if(type==="venus"){
+
+        const swirl=
+          Math.sin(
+            nx*34+
+            Math.sin(ny*18)*3
+          );
+
+        r=188+42*n+swirl*5;
+        g=150+34*n+swirl*4;
+        b=88+24*n;
+
+        if(n2>.91){
+          r+=20;
+          g+=15;
+        }
+      }
+
+      /* ---------------- EARTH ---------------- */
+
+      else if(type==="earth"){
+
+        r=22+22*n;
+        g=75+72*n;
+        b=150+70*n;
 
         const land=
           Math.sin(
-            nx*17+
-            Math.sin(ny*9)*2
+            nx*16+
+            Math.sin(ny*11)*2.4
           )+
           Math.sin(
-            ny*24+nx*4
+            ny*28+nx*5
           );
 
-        if(land>1.15){
-          r=70+40*n;
-          g=105+55*n;
+        if(land>1.1){
+
+          r=62+48*n;
+          g=102+60*n;
           b=48+30*n;
         }
 
         if(
-          n2>.87 &&
+          n2>.88 &&
           Math.sin(
-            ny*42+nx*10
-          )>.1
+            ny*43+
+            nx*13
+          )>.05
         ){
-          r=225;
-          g=230;
-          b=230;
+
+          r=232;
+          g=237;
+          b=238;
         }
-
-      }else if(type==="mars"){
-
-        r=135+65*n;
-        g=48+35*n;
-        b=27+20*n;
-
-        if(n2>.82){
-          r*=.65;
-          g*=.6;
-          b*=.55;
-        }
-
-      }else if(type==="jupiter"){
-
-        const band=
-          Math.sin(
-            ny*32+
-            Math.sin(nx*12)*2
-          );
-
-        if(band>.45){
-          r=180+35*n;
-          g=140+30*n;
-          b=105+25*n;
-        }else{
-          r=125+40*n;
-          g=95+30*n;
-          b=75+25*n;
-        }
-
-      }else if(type==="saturn"){
-
-        const band=
-          Math.sin(ny*48);
-
-        r=180+40*n+band*8;
-        g=155+35*n+band*7;
-        b=105+25*n+band*5;
-
-      }else if(type==="uranus"){
-
-        r=90+30*n;
-        g=185+45*n;
-        b=200+45*n;
-
-      }else if(type==="neptune"){
-
-        const band=
-          Math.sin(ny*25);
-
-        r=35+25*n;
-        g=65+35*n;
-        b=145+65*n+band*10;
-
-      }else if(type==="venus"){
-
-        const swirl=
-          Math.sin(
-            nx*30+
-            Math.sin(ny*20)*2
-          );
-
-        r=175+45*n+swirl*8;
-        g=125+35*n+swirl*6;
-        b=65+25*n;
-
-      }else if(type==="mercury"){
-
-        const crater=
-          n2>.86 ? 45:0;
-
-        r=125+50*n-crater;
-        g=120+45*n-crater;
-        b=110+40*n-crater;
-
-      }else if(type==="pluto"){
-
-        r=135+50*n;
-        g=115+35*n;
-        b=95+30*n;
-
-        if(n2>.87){
-          r+=40;
-          g+=30;
-          b+=20;
-        }
-
-      }else if(type==="moon"){
-
-        const crater=
-          n2>.82 ? -35:0;
-
-        r=150+45*n+crater;
-        g=148+43*n+crater;
-        b=142+40*n+crater;
-
-      }else if(type==="io"){
-
-        r=190+50*n;
-        g=145+45*n;
-        b=45+25*n;
-
-        if(n2>.84){
-          r=75;
-          g=42;
-          b=20;
-        }
-
-      }else if(type==="europa"){
-
-        r=180+50*n;
-        g=175+48*n;
-        b=165+45*n;
-
-        if(
-          Math.sin(
-            nx*75+ny*15
-          )>.96
-        ){
-          r=100;
-          g=85;
-          b=72;
-        }
-
-      }else if(type==="ganymede"){
-
-        r=110+65*n;
-        g=105+60*n;
-        b=95+55*n;
-
-      }else if(type==="callisto"){
-
-        r=75+50*n;
-        g=70+45*n;
-        b=65+40*n;
-
-      }else if(type==="titan"){
-
-        r=150+45*n;
-        g=100+35*n;
-        b=50+25*n;
-
-      }else if(type==="ice"){
-
-        r=185+40*n;
-        g=185+40*n;
-        b=180+45*n;
-
-      }else if(type==="darkice"){
-
-        r=70+55*n;
-        g=68+50*n;
-        b=65+48*n;
-
-      }else if(type==="rock"){
-
-        r=100+65*n;
-        g=90+55*n;
-        b=78+48*n;
       }
 
-      img.data[
-        (y*size+x)*4
-      ]=
+      /* ---------------- MARS ---------------- */
+
+      else if(type==="mars"){
+
+        r=155+58*n;
+        g=48+32*n;
+        b=27+19*n;
+
+        if(n2>.79){
+
+          r-=35;
+          g-=20;
+          b-=12;
+        }
+
+        if(n2>.94){
+
+          r=92;
+          g=39;
+          b=26;
+        }
+      }
+
+      /* ---------------- JUPITER ---------------- */
+
+      else if(type==="jupiter"){
+
+        const band=
+          Math.sin(
+            ny*37+
+            Math.sin(nx*15)*2
+          );
+
+        if(band>.55){
+
+          r=190+35*n;
+          g=157+32*n;
+          b=120+28*n;
+
+        }else if(band<-.45){
+
+          r=142+30*n;
+          g=108+25*n;
+          b=82+22*n;
+
+        }else{
+
+          r=172+38*n;
+          g=133+30*n;
+          b=98+25*n;
+        }
+
+        const spot=
+          Math.pow(
+            Math.sin(nx*18)*Math.cos(ny*11),
+            2
+          );
+
+        if(
+          spot>.92 &&
+          ny>.45 &&
+          ny<.68
+        ){
+
+          r=176;
+          g=105;
+          b=75;
+        }
+      }
+
+      /* ---------------- SATURN ---------------- */
+
+      else if(type==="saturn"){
+
+        const band=
+          Math.sin(
+            ny*48
+          );
+
+        r=195+32*n+band*5;
+        g=170+30*n+band*4;
+        b=116+25*n+band*3;
+      }
+
+      /* ---------------- URANUS ---------------- */
+
+      else if(type==="uranus"){
+
+        const band=
+          Math.sin(ny*20);
+
+        r=95+25*n;
+        g=188+38*n+band*3;
+        b=201+38*n+band*3;
+      }
+
+      /* ---------------- NEPTUNE ---------------- */
+
+      else if(type==="neptune"){
+
+        const band=
+          Math.sin(ny*28);
+
+        r=35+24*n;
+        g=64+32*n;
+        b=150+67*n+band*8;
+      }
+
+      /* ---------------- PLUTO ---------------- */
+
+      else if(type==="pluto"){
+
+        r=145+48*n;
+        g=119+38*n;
+        b=95+30*n;
+
+        if(
+          n2>.87
+        ){
+
+          r+=35;
+          g+=28;
+          b+=18;
+        }
+      }
+
+      /* ---------------- MOON ---------------- */
+
+      else if(type==="moon"){
+
+        const crater=
+          n2>.81 ? 42:0;
+
+        r=174+38*n-crater;
+        g=172+37*n-crater;
+        b=166+34*n-crater;
+
+        if(n2>.94){
+
+          r-=18;
+          g-=18;
+          b-=17;
+        }
+      }
+
+      /* ---------------- PHOBOS ---------------- */
+
+      else if(type==="phobos"){
+
+        r=112+38*n;
+        g=103+34*n;
+        b=91+29*n;
+
+        if(n2>.82){
+          r-=32;
+          g-=29;
+          b-=25;
+        }
+      }
+
+      /* ---------------- DEIMOS ---------------- */
+
+      else if(type==="deimos"){
+
+        r=137+35*n;
+        g=126+31*n;
+        b=111+28*n;
+
+        if(n2>.86){
+          r-=38;
+          g-=34;
+          b-=30;
+        }
+      }
+
+      /* ---------------- IO ---------------- */
+
+      else if(type==="io"){
+
+        r=214+35*n;
+        g=169+40*n;
+        b=58+22*n;
+
+        if(n2>.82){
+
+          r=104+35*n;
+          g=55+20*n;
+          b=25+12*n;
+        }
+
+        if(
+          Math.sin(nx*50+ny*23)>.97
+        ){
+
+          r=155;
+          g=74;
+          b=27;
+        }
+      }
+
+      /* ---------------- EUROPA ---------------- */
+
+      else if(type==="europa"){
+
+        r=188+43*n;
+        g=183+41*n;
+        b=170+38*n;
+
+        const crack=
+          Math.sin(
+            nx*85+
+            Math.sin(ny*20)*4
+          );
+
+        if(crack>.97){
+
+          r=117;
+          g=103;
+          b=87;
+        }
+      }
+
+      /* ---------------- GANYMEDE ---------------- */
+
+      else if(type==="ganymede"){
+
+        r=128+58*n;
+        g=123+55*n;
+        b=111+50*n;
+
+        if(n2>.9){
+          r-=25;
+          g-=24;
+          b-=22;
+        }
+      }
+
+      /* ---------------- CALLISTO ---------------- */
+
+      else if(type==="callisto"){
+
+        r=82+47*n;
+        g=77+44*n;
+        b=70+39*n;
+
+        if(n2>.85){
+          r-=24;
+          g-=22;
+          b-=20;
+        }
+      }
+
+      /* ---------------- ENCELADUS ---------------- */
+
+      else if(type==="enceladus"){
+
+        r=215+30*n;
+        g=219+30*n;
+        b=216+32*n;
+
+        if(n2>.91){
+          r-=22;
+          g-=20;
+          b-=16;
+        }
+      }
+
+      /* ---------------- RHEA ---------------- */
+
+      else if(type==="rhea"){
+
+        r=170+48*n;
+        g=166+45*n;
+        b=156+42*n;
+
+        if(n2>.86){
+          r-=28;
+          g-=27;
+          b-=25;
+        }
+      }
+
+      /* ---------------- TITAN ---------------- */
+
+      else if(type==="titan"){
+
+        r=169+42*n;
+        g=112+35*n;
+        b=56+24*n;
+
+        if(n2>.89){
+          r+=15;
+          g+=8;
+        }
+      }
+
+      /* ---------------- IAPETUS ---------------- */
+
+      else if(type==="iapetus"){
+
+        r=89+52*n;
+        g=84+48*n;
+        b=77+43*n;
+
+        if(nx>.5 && n2>.68){
+          r-=28;
+          g-=27;
+          b-=25;
+        }
+      }
+
+      /* ---------------- ARIEL ---------------- */
+
+      else if(type==="ariel"){
+
+        r=158+45*n;
+        g=154+43*n;
+        b=145+39*n;
+      }
+
+      /* ---------------- UMBRIEL ---------------- */
+
+      else if(type==="umbriel"){
+
+        r=83+48*n;
+        g=82+45*n;
+        b=78+42*n;
+      }
+
+      /* ---------------- TITANIA ---------------- */
+
+      else if(type==="titania"){
+
+        r=140+48*n;
+        g=137+44*n;
+        b=128+41*n;
+      }
+
+      /* ---------------- OBERON ---------------- */
+
+      else if(type==="oberon"){
+
+        r=111+48*n;
+        g=105+43*n;
+        b=96+39*n;
+      }
+
+      /* ---------------- TRITON ---------------- */
+
+      else if(type==="triton"){
+
+        r=183+42*n;
+        g=180+40*n;
+        b=170+38*n;
+
+        if(n2>.89){
+
+          r=207;
+          g=198;
+          b=181;
+        }
+      }
+
+      /* ---------------- CHARON ---------------- */
+
+      else if(type==="charon"){
+
+        r=126+48*n;
+        g=114+40*n;
+        b=103+34*n;
+
+        if(n2>.9){
+
+          r+=35;
+          g+=27;
+          b+=22;
+        }
+      }
+
+      const index=
+        (y*size+x)*4;
+
+      img.data[index]=
         Math.max(
           0,
           Math.min(255,r)
         );
 
-      img.data[
-        (y*size+x)*4+1
-      ]=
+      img.data[index+1]=
         Math.max(
           0,
           Math.min(255,g)
         );
 
-      img.data[
-        (y*size+x)*4+2
-      ]=
+      img.data[index+2]=
         Math.max(
           0,
           Math.min(255,b)
         );
 
-      img.data[
-        (y*size+x)*4+3
-      ]=255;
+      img.data[index+3]=255;
     }
   }
 
@@ -1303,474 +1902,371 @@ function makeTexture(type){
     img,0,0
   );
 
-  return new THREE.CanvasTexture(c);
+  const texture=
+    new THREE.CanvasTexture(c);
+
+  texture.colorSpace=
+    THREE.SRGBColorSpace;
+
+  return texture;
 }
 
 /* =========================================================
-   PLANET DATA
+   SCENE
    ========================================================= */
 
-const DATA={
+const scene=
+  new THREE.Scene();
 
-Sun:{
- type:"STAR",
- parent:"Milky Way / Solar System",
- distance:"0 km from system center",
- period:"≈25–35 days rotation",
- orbit:"Solar-system central star",
- diameter:"1,392,700 km",
- gravity:"274 m/s²",
- mass:"1.989 × 10³⁰ kg",
- atmosphere:"Extremely hot plasma atmosphere. The visible surface is the photosphere; the outer atmosphere includes the corona.",
- history:"The Sun formed about 4.6 billion years ago and is the gravitational center of our planetary system.",
- fact:"The Sun contains more than 99% of the Solar System's mass."
-},
+scene.background=
+  new THREE.Color(
+    0x020713
+  );
 
-Mercury:{
- type:"TERRESTRIAL PLANET",
- parent:"Sun",
- distance:"57.9 million km average",
- period:"87.97 days",
- orbit:"Solar orbit",
- diameter:"4,879 km",
- gravity:"3.70 m/s²",
- mass:"3.301 × 10²³ kg",
- atmosphere:"Very thin exosphere containing atoms released from the surface and solar-wind interactions. Surface temperatures vary dramatically.",
- history:"Mercury has been studied by Mariner 10 and NASA's MESSENGER; BepiColombo is studying the planet.",
- fact:"Mercury is the smallest planet and the closest planet to the Sun."
-},
+scene.fog=
+  new THREE.FogExp2(
+    0x020713,
+    0.00035
+  );
 
-Venus:{
- type:"TERRESTRIAL PLANET",
- parent:"Sun",
- distance:"108.2 million km average",
- period:"224.70 days",
- orbit:"Solar orbit",
- diameter:"12,104 km",
- gravity:"8.87 m/s²",
- mass:"4.867 × 10²⁴ kg",
- atmosphere:"Extremely dense carbon-dioxide atmosphere with sulfuric-acid clouds. Surface pressure is about 90 times Earth's.",
- history:"Venus has been visited by numerous robotic missions including NASA's Magellan and the Soviet Venera spacecraft.",
- fact:"Venus is the hottest planet in the Solar System."
-},
+const camera=
+  new THREE.PerspectiveCamera(
+    52,
+    innerWidth/innerHeight,
+    .1,
+    5000
+  );
 
-Earth:{
- type:"TERRESTRIAL PLANET",
- parent:"Sun",
- distance:"149.6 million km average",
- period:"365.256 days",
- orbit:"Solar orbit",
- diameter:"12,742 km",
- gravity:"9.81 m/s²",
- mass:"5.972 × 10²⁴ kg",
- atmosphere:"Nitrogen-oxygen atmosphere with water vapor and variable trace gases. Weather is driven by solar heating and Earth's atmosphere and oceans.",
- history:"Earth formed about 4.6 billion years ago. It is the only world currently known to support life.",
- fact:"Earth has abundant surface liquid water and is the only known world with life."
-},
+camera.position.set(
+  235,145,265
+);
 
-Moon:{
- type:"NATURAL SATELLITE",
- parent:"Earth",
- distance:"384,400 km from Earth",
- period:"27.3217 days",
- orbit:"Earth satellite orbit",
- diameter:"3,474.8 km",
- gravity:"1.62 m/s²",
- mass:"7.346 × 10²² kg",
- atmosphere:"Very thin exosphere. Surface conditions include vacuum-like pressure, radiation exposure and extreme temperature variation.",
- history:"Apollo 11 achieved the first crewed lunar landing on July 20, 1969. Numerous robotic missions have followed.",
- fact:"The Moon is tidally locked to Earth, so nearly the same hemisphere faces Earth."
-},
+const renderer=
+  new THREE.WebGLRenderer({
+    antialias:true,
+    powerPreference:"high-performance"
+  });
 
-Mars:{
- type:"TERRESTRIAL PLANET",
- parent:"Sun",
- distance:"227.9 million km average",
- period:"686.98 days",
- orbit:"Solar orbit",
- diameter:"6,779 km",
- gravity:"3.71 m/s²",
- mass:"6.417 × 10²³ kg",
- atmosphere:"Thin atmosphere dominated by carbon dioxide, with dust storms and strong seasonal changes.",
- history:"Mars has been explored by orbiters, landers and rovers including Viking, Spirit, Opportunity, Curiosity and Perseverance.",
- fact:"Mars has the largest volcano and one of the largest canyon systems known in the Solar System."
-},
+renderer.setPixelRatio(
+  Math.min(
+    devicePixelRatio,
+    2
+  )
+);
 
-Jupiter:{
- type:"GAS GIANT",
- parent:"Sun",
- distance:"778.5 million km average",
- period:"11.86 years",
- orbit:"Solar orbit",
- diameter:"139,820 km",
- gravity:"24.79 m/s²",
- mass:"1.898 × 10²⁷ kg",
- atmosphere:"Mostly hydrogen and helium with powerful jet streams, storms and cloud bands.",
- history:"Jupiter has been visited by Pioneer, Voyager, Galileo, Juno and other spacecraft.",
- fact:"Jupiter is the largest planet in the Solar System."
-},
+renderer.setSize(
+  innerWidth,
+  innerHeight
+);
 
-Saturn:{
- type:"GAS GIANT",
- parent:"Sun",
- distance:"1.43 billion km average",
- period:"29.45 years",
- orbit:"Solar orbit",
- diameter:"116,460 km",
- gravity:"10.44 m/s²",
- mass:"5.683 × 10²⁶ kg",
- atmosphere:"Hydrogen and helium dominate. Fast winds, storms and complex cloud layers occur in its atmosphere.",
- history:"Pioneer 11, Voyager 1, Voyager 2 and Cassini-Huygens greatly expanded knowledge of Saturn and its moons.",
- fact:"Saturn's rings are made mostly of water-ice particles mixed with rocky material."
-},
+renderer.outputColorSpace=
+  THREE.SRGBColorSpace;
 
-Uranus:{
- type:"ICE GIANT",
- parent:"Sun",
- distance:"2.87 billion km average",
- period:"84.02 years",
- orbit:"Solar orbit",
- diameter:"50,724 km",
- gravity:"8.69 m/s²",
- mass:"8.681 × 10²⁵ kg",
- atmosphere:"Hydrogen and helium with methane. Uranus has a very cold upper atmosphere and seasonal atmospheric changes.",
- history:"Voyager 2 made the only close flyby of Uranus in 1986.",
- fact:"Uranus rotates with an extreme axial tilt, essentially rolling around the Sun."
-},
+renderer.toneMapping=
+  THREE.ACESFilmicToneMapping;
 
-Neptune:{
- type:"ICE GIANT",
- parent:"Sun",
- distance:"4.50 billion km average",
- period:"164.79 years",
- orbit:"Solar orbit",
- diameter:"49,244 km",
- gravity:"11.15 m/s²",
- mass:"1.024 × 10²⁶ kg",
- atmosphere:"Hydrogen, helium and methane with extremely fast winds and dynamic storms.",
- history:"Voyager 2 made the only close flyby of Neptune in 1989.",
- fact:"Neptune has some of the fastest winds measured on any planet."
-},
+renderer.toneMappingExposure=
+  1.22;
 
-Pluto:{
- type:"DWARF PLANET",
- parent:"Sun",
- distance:"5.91 billion km average",
- period:"247.94 years",
- orbit:"Kuiper Belt / Solar orbit",
- diameter:"2,377 km",
- gravity:"0.62 m/s²",
- mass:"1.303 × 10²² kg",
- atmosphere:"Thin, seasonal atmosphere containing nitrogen with methane and carbon monoxide.",
- history:"NASA's New Horizons spacecraft performed the first close flyby of Pluto in 2015.",
- fact:"Pluto and Charon orbit a barycenter outside Pluto's surface."
-},
+document.body.appendChild(
+  renderer.domElement
+);
 
-Phobos:{
- type:"NATURAL SATELLITE",
- parent:"Mars",
- distance:"9,378 km from Mars center",
- period:"7.65 hours",
- orbit:"Mars satellite orbit",
- diameter:"≈22.4 km",
- gravity:"≈0.0057 m/s²",
- mass:"≈1.07 × 10¹⁶ kg",
- atmosphere:"No substantial atmosphere.",
- history:"Phobos has been photographed and studied by multiple Mars missions.",
- fact:"Phobos orbits Mars faster than Mars rotates."
-},
+const controls=
+  new OrbitControls(
+    camera,
+    renderer.domElement
+  );
 
-Deimos:{
- type:"NATURAL SATELLITE",
- parent:"Mars",
- distance:"23,460 km from Mars center",
- period:"30.35 hours",
- orbit:"Mars satellite orbit",
- diameter:"≈12.4 km",
- gravity:"Very low",
- mass:"≈1.48 × 10¹⁵ kg",
- atmosphere:"No substantial atmosphere.",
- history:"Deimos has been observed by Mars orbiters and landers.",
- fact:"Deimos is the smaller and more distant moon of Mars."
-},
+controls.enableDamping=true;
+controls.dampingFactor=.055;
+controls.minDistance=25;
+controls.maxDistance=900;
 
-Io:{
- type:"NATURAL SATELLITE",
- parent:"Jupiter",
- distance:"421,700 km from Jupiter center",
- period:"1.769 days",
- orbit:"Jupiter satellite orbit",
- diameter:"3,643 km",
- gravity:"1.80 m/s²",
- mass:"8.93 × 10²² kg",
- atmosphere:"Very thin sulfur-dioxide atmosphere, strongly affected by volcanic activity and Jupiter's environment.",
- history:"Voyager, Galileo, Cassini, New Horizons and Juno have observed Io.",
- fact:"Io is the most volcanically active world known in the Solar System."
-},
+/* =========================================================
+   LIGHT
+   ========================================================= */
 
-Europa:{
- type:"NATURAL SATELLITE",
- parent:"Jupiter",
- distance:"671,100 km from Jupiter center",
- period:"3.551 days",
- orbit:"Jupiter satellite orbit",
- diameter:"3,122 km",
- gravity:"1.31 m/s²",
- mass:"4.80 × 10²² kg",
- atmosphere:"Extremely thin oxygen atmosphere with surface-generated particles.",
- history:"Galileo provided detailed observations. NASA's Europa Clipper mission is designed to investigate Europa.",
- fact:"Europa has strong evidence for a global subsurface ocean beneath its icy shell."
-},
+scene.add(
+  new THREE.AmbientLight(
+    0xffffff,
+    .25
+  )
+);
 
-Ganymede:{
- type:"NATURAL SATELLITE",
- parent:"Jupiter",
- distance:"1.07 million km from Jupiter center",
- period:"7.155 days",
- orbit:"Jupiter satellite orbit",
- diameter:"5,268 km",
- gravity:"1.43 m/s²",
- mass:"1.482 × 10²³ kg",
- atmosphere:"Very thin oxygen-related atmosphere.",
- history:"Galileo and other spacecraft studied Ganymede; ESA's JUICE mission is designed to study the Jovian system.",
- fact:"Ganymede is the largest moon in the Solar System."
-},
+const sunLight=
+  new THREE.PointLight(
+    0xffffff,
+    4.5,
+    0,
+    2
+  );
 
-Callisto:{
- type:"NATURAL SATELLITE",
- parent:"Jupiter",
- distance:"1.883 million km from Jupiter center",
- period:"16.689 days",
- orbit:"Jupiter satellite orbit",
- diameter:"4,821 km",
- gravity:"1.24 m/s²",
- mass:"1.076 × 10²³ kg",
- atmosphere:"Extremely thin carbon-dioxide/oxygen-related environment.",
- history:"The Voyager and Galileo spacecraft provided major observations.",
- fact:"Callisto is one of the most heavily cratered bodies in the Solar System."
-},
+scene.add(
+  sunLight
+);
 
-Enceladus:{
- type:"NATURAL SATELLITE",
- parent:"Saturn",
- distance:"238,000 km from Saturn center",
- period:"1.370 days",
- orbit:"Saturn satellite orbit",
- diameter:"504.2 km",
- gravity:"0.113 m/s²",
- mass:"1.08 × 10²⁰ kg",
- atmosphere:"Very thin water-vapor-rich environment associated with active south-polar plumes.",
- history:"Cassini made repeated close observations and discovered evidence of a subsurface ocean.",
- fact:"Enceladus ejects water-rich material into space through south-polar plumes."
-},
+/* =========================================================
+   REALISTIC BRIGHT STAR FIELD
+   ========================================================= */
 
-Rhea:{
- type:"NATURAL SATELLITE",
- parent:"Saturn",
- distance:"527,000 km from Saturn center",
- period:"4.518 days",
- orbit:"Saturn satellite orbit",
- diameter:"1,528 km",
- gravity:"0.264 m/s²",
- mass:"2.31 × 10²¹ kg",
- atmosphere:"Extremely thin oxygen and carbon-dioxide exosphere.",
- history:"Voyager and Cassini spacecraft studied Rhea.",
- fact:"Rhea is an icy, heavily cratered Saturnian moon."
-},
+const starGroup=
+  new THREE.Group();
 
-Titan:{
- type:"NATURAL SATELLITE",
- parent:"Saturn",
- distance:"1.222 million km from Saturn center",
- period:"15.945 days",
- orbit:"Saturn satellite orbit",
- diameter:"5,150 km",
- gravity:"1.35 m/s²",
- mass:"1.345 × 10²³ kg",
- atmosphere:"Dense nitrogen-rich atmosphere with methane and complex organic chemistry.",
- history:"Cassini-Huygens explored Titan extensively; Huygens landed on its surface in 2005.",
- fact:"Titan is the only moon known to have a dense atmosphere and stable surface liquids."
-},
+const starGeometry=
+  new THREE.BufferGeometry();
 
-Iapetus:{
- type:"NATURAL SATELLITE",
- parent:"Saturn",
- distance:"3.56 million km from Saturn center",
- period:"79.33 days",
- orbit:"Saturn satellite orbit",
- diameter:"1,469 km",
- gravity:"0.223 m/s²",
- mass:"1.81 × 10²¹ kg",
- atmosphere:"No substantial atmosphere.",
- history:"Voyager and Cassini obtained detailed observations.",
- fact:"Iapetus has a striking two-tone surface."
-},
+const starCount=65000;
 
-Ariel:{
- type:"NATURAL SATELLITE",
- parent:"Uranus",
- distance:"191,000 km from Uranus center",
- period:"2.520 days",
- orbit:"Uranus satellite orbit",
- diameter:"1,158 km",
- gravity:"≈0.27 m/s²",
- mass:"≈1.35 × 10²¹ kg",
- atmosphere:"No substantial atmosphere.",
- history:"Voyager 2 obtained the best close images of Ariel in 1986.",
- fact:"Ariel has extensive canyon and valley systems."
-},
+const starPositions=
+  new Float32Array(
+    starCount*3
+  );
 
-Umbriel:{
- type:"NATURAL SATELLITE",
- parent:"Uranus",
- distance:"266,000 km from Uranus center",
- period:"4.144 days",
- orbit:"Uranus satellite orbit",
- diameter:"1,169 km",
- gravity:"≈0.23 m/s²",
- mass:"≈1.17 × 10²¹ kg",
- atmosphere:"No substantial atmosphere.",
- history:"Voyager 2 photographed Umbriel during its Uranus flyby.",
- fact:"Umbriel is one of Uranus's darkest major moons."
-},
+const starColors=
+  new Float32Array(
+    starCount*3
+  );
 
-Titania:{
- type:"NATURAL SATELLITE",
- parent:"Uranus",
- distance:"436,000 km from Uranus center",
- period:"8.706 days",
- orbit:"Uranus satellite orbit",
- diameter:"1,578 km",
- gravity:"≈0.38 m/s²",
- mass:"≈3.53 × 10²¹ kg",
- atmosphere:"No substantial atmosphere.",
- history:"Voyager 2 provided the principal close observations.",
- fact:"Titania is the largest moon of Uranus."
-},
+const starSizes=
+  new Float32Array(
+    starCount
+  );
 
-Oberon:{
- type:"NATURAL SATELLITE",
- parent:"Uranus",
- distance:"583,000 km from Uranus center",
- period:"13.463 days",
- orbit:"Uranus satellite orbit",
- diameter:"1,523 km",
- gravity:"≈0.35 m/s²",
- mass:"≈3.01 × 10²¹ kg",
- atmosphere:"No substantial atmosphere.",
- history:"Voyager 2 photographed Oberon during its 1986 encounter.",
- fact:"Oberon is the outermost of Uranus's five major moons."
-},
+for(
+  let i=0;
+  i<starCount;
+  i++
+){
 
-Triton:{
- type:"NATURAL SATELLITE",
- parent:"Neptune",
- distance:"354,800 km from Neptune center",
- period:"5.877 days",
- orbit:"Neptune satellite orbit",
- diameter:"2,707 km",
- gravity:"0.779 m/s²",
- mass:"2.14 × 10²² kg",
- atmosphere:"Very thin nitrogen atmosphere with surface frost and seasonal changes.",
- history:"Voyager 2 performed the only close flyby of Triton in 1989.",
- fact:"Triton has a retrograde orbit around Neptune."
-},
+  const radius=
+    600+
+    Math.random()*1300;
 
-Charon:{
- type:"NATURAL SATELLITE",
- parent:"Pluto",
- distance:"≈19,570 km from Pluto system barycenter",
- period:"6.387 days",
- orbit:"Pluto-Charon binary system",
- diameter:"1,212 km",
- gravity:"≈0.288 m/s²",
- mass:"1.586 × 10²¹ kg",
- atmosphere:"No substantial persistent atmosphere detected.",
- history:"New Horizons obtained the first close-up observations of Charon in 2015.",
- fact:"Charon is so large relative to Pluto that the pair orbit a barycenter outside Pluto."
+  const theta=
+    Math.random()*
+    Math.PI*2;
+
+  const phi=
+    Math.acos(
+      2*Math.random()-1
+    );
+
+  const x=
+    radius*
+    Math.sin(phi)*
+    Math.cos(theta);
+
+  const y=
+    radius*
+    Math.cos(phi);
+
+  const z=
+    radius*
+    Math.sin(phi)*
+    Math.sin(theta);
+
+  const p=i*3;
+
+  starPositions[p]=x;
+  starPositions[p+1]=y;
+  starPositions[p+2]=z;
+
+  /*
+    Mostly white stars,
+    with subtle natural blue/yellow variation.
+  */
+
+  const type=
+    Math.random();
+
+  if(type<.68){
+
+    starColors[p]=1;
+    starColors[p+1]=1;
+    starColors[p+2]=1;
+
+  }else if(type<.84){
+
+    starColors[p]=.78;
+    starColors[p+1]=.88;
+    starColors[p+2]=1;
+
+  }else{
+
+    starColors[p]=1;
+    starColors[p+1]=.88;
+    starColors[p+2]=.68;
+  }
+
+  starSizes[i]=
+    .6+
+    Math.random()*1.8;
 }
 
-};
+starGeometry.setAttribute(
+  "position",
+  new THREE.BufferAttribute(
+    starPositions,
+    3
+  )
+);
+
+starGeometry.setAttribute(
+  "color",
+  new THREE.BufferAttribute(
+    starColors,
+    3
+  )
+);
+
+starGeometry.setAttribute(
+  "size",
+  new THREE.BufferAttribute(
+    starSizes,
+    1
+  )
+);
+
+const starMaterial=
+  new THREE.PointsMaterial({
+
+    color:0xffffff,
+
+    size:.95,
+
+    sizeAttenuation:true,
+
+    transparent:true,
+
+    opacity:.95,
+
+    vertexColors:true,
+
+    depthWrite:false,
+
+    blending:
+      THREE.AdditiveBlending
+
+  });
+
+const stars=
+  new THREE.Points(
+    starGeometry,
+    starMaterial
+  );
+
+starGroup.add(
+  stars
+);
+
+scene.add(
+  starGroup
+);
 
 /* =========================================================
-   PLANET CONFIG
+   ADD SECOND DIM STAR LAYER
    ========================================================= */
 
-const PLANETS=[
+const tinyStarGeometry=
+  new THREE.BufferGeometry();
 
-{name:"Mercury",radius:2.8,orbit:24,color:"mercury",speed:.020},
-{name:"Venus",radius:3.7,orbit:35,color:"venus",speed:.014},
-{name:"Earth",radius:4.5,orbit:48,color:"earth",speed:.011},
-{name:"Mars",radius:3.8,orbit:62,color:"mars",speed:.009},
-{name:"Jupiter",radius:8.3,orbit:82,color:"jupiter",speed:.006,bands:true},
-{name:"Saturn",radius:7.6,orbit:106,color:"saturn",speed:.0048,bands:true},
-{name:"Uranus",radius:5.8,orbit:132,color:"uranus",speed:.0035},
-{name:"Neptune",radius:5.8,orbit:158,color:"neptune",speed:.0028},
-{name:"Pluto",radius:2.7,orbit:183,color:"pluto",speed:.002}
+const tinyCount=35000;
 
-];
+const tinyPositions=
+  new Float32Array(
+    tinyCount*3
+  );
 
-const MOONS=[
+for(
+  let i=0;
+  i<tinyCount;
+  i++
+){
 
-{name:"Moon",parent:"Earth",radius:1.15,orbit:6.5,speed:.035,color:"moon"},
+  const radius=
+    500+
+    Math.random()*1700;
 
-{name:"Phobos",parent:"Mars",radius:.55,orbit:5.5,speed:.055,color:"rock"},
-{name:"Deimos",parent:"Mars",radius:.42,orbit:8,speed:.030,color:"rock"},
+  const theta=
+    Math.random()*
+    Math.PI*2;
 
-{name:"Io",parent:"Jupiter",radius:1.15,orbit:10.5,speed:.030,color:"io"},
-{name:"Europa",parent:"Jupiter",radius:1.05,orbit:13,speed:.024,color:"europa"},
-{name:"Ganymede",parent:"Jupiter",radius:1.35,orbit:16,speed:.018,color:"ganymede"},
-{name:"Callisto",parent:"Jupiter",radius:1.25,orbit:20,speed:.012,color:"callisto"},
+  const phi=
+    Math.acos(
+      2*Math.random()-1
+    );
 
-{name:"Enceladus",parent:"Saturn",radius:.58,orbit:10,speed:.030,color:"ice"},
-{name:"Rhea",parent:"Saturn",radius:.85,orbit:13,speed:.022,color:"ice"},
-{name:"Titan",parent:"Saturn",radius:1.45,orbit:17,speed:.017,color:"titan"},
-{name:"Iapetus",parent:"Saturn",radius:.75,orbit:23,speed:.009,color:"darkice"},
+  const p=i*3;
 
-{name:"Ariel",parent:"Uranus",radius:.65,orbit:9,speed:.026,color:"ice"},
-{name:"Umbriel",parent:"Uranus",radius:.65,orbit:11,speed:.021,color:"darkice"},
-{name:"Titania",parent:"Uranus",radius:.85,orbit:14,speed:.016,color:"ice"},
-{name:"Oberon",parent:"Uranus",radius:.82,orbit:17,speed:.012,color:"rock"},
+  tinyPositions[p]=
+    radius*
+    Math.sin(phi)*
+    Math.cos(theta);
 
-{name:"Triton",parent:"Neptune",radius:1.0,orbit:10,speed:.018,color:"ice"},
+  tinyPositions[p+1]=
+    radius*
+    Math.cos(phi);
 
-{name:"Charon",parent:"Pluto",radius:1.0,orbit:6.5,speed:.028,color:"rock"}
+  tinyPositions[p+2]=
+    radius*
+    Math.sin(phi)*
+    Math.sin(theta);
+}
 
-];
+tinyStarGeometry.setAttribute(
+  "position",
+  new THREE.BufferAttribute(
+    tinyPositions,
+    3
+  )
+);
+
+const tinyStarMaterial=
+  new THREE.PointsMaterial({
+
+    color:0x8fbfff,
+
+    size:.45,
+
+    transparent:true,
+
+    opacity:.5,
+
+    depthWrite:false,
+
+    blending:
+      THREE.AdditiveBlending
+
+  });
+
+scene.add(
+  new THREE.Points(
+    tinyStarGeometry,
+    tinyStarMaterial
+  )
+);
 
 /* =========================================================
-   OBJECT STORAGE
+   ORBIT CREATOR
    ========================================================= */
 
-const bodies={};
-const satellites={};
-
-/* =========================================================
-   ORBITS
-   ========================================================= */
-
-const orbitColors={
-
-Mercury:0x8b8479,
-Venus:0xd5b17b,
-Earth:0x4b9ed8,
-Mars:0xb65b3b,
-Jupiter:0xc09572,
-Saturn:0xc7ae7a,
-Uranus:0x76c8d1,
-Neptune:0x4166bd,
-Pluto:0xa28f7d
-
-};
-
-function createOrbit(radius,color){
+function createOrbit(
+  radius,
+  color
+){
 
   const points=[];
 
-  for(let i=0;i<=256;i++){
+  for(
+    let i=0;
+    i<=256;
+    i++
+  ){
 
     const a=
-      i/256*Math.PI*2;
+      i/256*
+      Math.PI*2;
 
     points.push(
       new THREE.Vector3(
@@ -1783,13 +2279,15 @@ function createOrbit(radius,color){
 
   const geo=
     new THREE.BufferGeometry()
-      .setFromPoints(points);
+      .setFromPoints(
+        points
+      );
 
   const mat=
     new THREE.LineBasicMaterial({
       color,
       transparent:true,
-      opacity:.28
+      opacity:.3
     });
 
   return new THREE.LineLoop(
@@ -1809,7 +2307,9 @@ function addLabel(
 ){
 
   const div=
-    document.createElement("div");
+    document.createElement(
+      "div"
+    );
 
   div.textContent=name;
 
@@ -1817,24 +2317,31 @@ function addLabel(
   div.style.padding="3px 6px";
   div.style.borderRadius="7px";
   div.style.background=
-    "rgba(0,0,0,.45)";
+    "rgba(0,0,0,.48)";
   div.style.border=
     "1px solid rgba(100,200,255,.15)";
   div.style.color="white";
   div.style.fontSize=
-    radius<1 ? "8px":"10px";
+    radius<1
+      ?"8px"
+      :"10px";
   div.style.pointerEvents="none";
   div.style.whiteSpace="nowrap";
-  div.style.opacity=".8";
+  div.style.opacity=".85";
 
-  document.body.appendChild(div);
+  document.body.appendChild(
+    div
+  );
 
-  parent.userData.label=div;
+  parent.userData.label=
+    div;
 }
 
 /* =========================================================
-   PLANET
+   PLANET CREATOR
    ========================================================= */
+
+const bodies={};
 
 function createPlanet(cfg){
 
@@ -1844,27 +2351,31 @@ function createPlanet(cfg){
   group.userData.key=
     cfg.name;
 
-  const texture=
-    makeTexture(cfg.color);
-
-  texture.colorSpace=
-    THREE.SRGBColorSpace;
-
   const material=
     new THREE.MeshStandardMaterial({
-      map:texture,
+
+      map:
+        makeTexture(
+          cfg.color
+        ),
+
       roughness:.88,
+
       metalness:0
+
     });
 
   const mesh=
     new THREE.Mesh(
+
       new THREE.SphereGeometry(
         cfg.radius,
         64,
         64
       ),
+
       material
+
     );
 
   mesh.userData.key=
@@ -1875,27 +2386,44 @@ function createPlanet(cfg){
 
   group.add(mesh);
 
-  if(cfg.name==="Earth"){
+  /* EARTH ATMOSPHERE */
+
+  if(
+    cfg.name==="Earth"
+  ){
 
     const atm=
       new THREE.Mesh(
+
         new THREE.SphereGeometry(
-          cfg.radius*1.045,
+          cfg.radius*1.05,
           48,
           48
         ),
+
         new THREE.MeshBasicMaterial({
-          color:0x48aaff,
+
+          color:0x4aaaff,
+
           transparent:true,
-          opacity:.12,
-          side:THREE.BackSide
+
+          opacity:.13,
+
+          side:
+            THREE.BackSide
+
         })
+
       );
 
     group.add(atm);
   }
 
-  if(cfg.name==="Saturn"){
+  /* SATURN RINGS */
+
+  if(
+    cfg.name==="Saturn"
+  ){
 
     const ringGeo=
       new THREE.RingGeometry(
@@ -1906,11 +2434,18 @@ function createPlanet(cfg){
 
     const ringMat=
       new THREE.MeshStandardMaterial({
-        color:0xb9a77f,
-        side:THREE.DoubleSide,
+
+        color:0xc4ae7d,
+
+        side:
+          THREE.DoubleSide,
+
         transparent:true,
-        opacity:.72,
+
+        opacity:.74,
+
         roughness:1
+
       });
 
     const ring=
@@ -1954,8 +2489,10 @@ function createPlanet(cfg){
 }
 
 /* =========================================================
-   MOON
+   MOON CREATOR
    ========================================================= */
+
+const satellites={};
 
 function createMoon(cfg){
 
@@ -1970,28 +2507,35 @@ function createMoon(cfg){
   holder.position.x=
     cfg.orbit;
 
-  parent.group.add(holder);
-
-  const texture=
-    makeTexture(cfg.color);
-
-  texture.colorSpace=
-    THREE.SRGBColorSpace;
+  parent.group.add(
+    holder
+  );
 
   const material=
     new THREE.MeshStandardMaterial({
-      map:texture,
-      roughness:.95
+
+      map:
+        makeTexture(
+          cfg.color
+        ),
+
+      roughness:.94,
+
+      metalness:0
+
     });
 
   const mesh=
     new THREE.Mesh(
+
       new THREE.SphereGeometry(
         cfg.radius,
         40,
         40
       ),
+
       material
+
     );
 
   mesh.userData.key=
@@ -2002,11 +2546,14 @@ function createMoon(cfg){
 
   holder.add(mesh);
 
-  parent.group.add(
+  const localOrbit=
     createOrbit(
       cfg.orbit,
       0x687889
-    )
+    );
+
+  parent.group.add(
+    localOrbit
   );
 
   satellites[cfg.name]={
@@ -2026,41 +2573,75 @@ function createMoon(cfg){
 }
 
 /* =========================================================
+   CREATE SOLAR SYSTEM
+   ========================================================= */
+
+PLANETS.forEach(
+  createPlanet
+);
+
+MOONS.forEach(
+  createMoon
+);
+
+/* =========================================================
    SUN
    ========================================================= */
 
 const sun=
   new THREE.Mesh(
+
     new THREE.SphereGeometry(
-      12,64,64
+      12,
+      64,
+      64
     ),
+
     new THREE.MeshBasicMaterial({
-      map:makeSunTexture()
+      map:
+        makeSunTexture()
     })
+
   );
 
 sun.userData.key="Sun";
 
 scene.add(sun);
 
-scene.add(
+const sunGlow=
   new THREE.Mesh(
+
     new THREE.SphereGeometry(
-      15.5,48,48
+      15.8,
+      48,
+      48
     ),
+
     new THREE.MeshBasicMaterial({
+
       color:0xffa51f,
+
       transparent:true,
-      opacity:.075,
-      side:THREE.BackSide
+
+      opacity:.08,
+
+      side:
+        THREE.BackSide
+
     })
-  )
+
+  );
+
+scene.add(
+  sunGlow
 );
 
 function makeSunTexture(){
 
   const c=
-    document.createElement("canvas");
+    document.createElement(
+      "canvas"
+    );
 
   c.width=512;
   c.height=256;
@@ -2070,46 +2651,57 @@ function makeSunTexture(){
 
   const g=
     ctx.createRadialGradient(
-      256,128,10,
-      256,128,280
+      256,128,8,
+      256,128,285
     );
 
   g.addColorStop(
     0,
-    "#fff8b0"
+    "#fffbd0"
   );
 
   g.addColorStop(
-    .35,
-    "#ffd34d"
+    .25,
+    "#fff07a"
   );
 
   g.addColorStop(
-    .7,
-    "#ff9d19"
+    .55,
+    "#ffc229"
+  );
+
+  g.addColorStop(
+    .8,
+    "#ff8d12"
   );
 
   g.addColorStop(
     1,
-    "#df4c08"
+    "#e64b06"
   );
 
   ctx.fillStyle=g;
+
   ctx.fillRect(
     0,0,512,256
   );
 
-  for(let i=0;i<400;i++){
+  for(
+    let i=0;
+    i<550;
+    i++
+  ){
 
     ctx.fillStyle=
-      `rgba(255,${80+Math.random()*130},20,.15)`;
+      "rgba(255,100,15,.13)";
 
     ctx.beginPath();
 
     ctx.arc(
       Math.random()*512,
       Math.random()*256,
-      2+Math.random()*12,
+      1+
+      Math.random()*10,
       0,
       Math.PI*2
     );
@@ -2117,22 +2709,14 @@ function makeSunTexture(){
     ctx.fill();
   }
 
-  const t=
+  const texture=
     new THREE.CanvasTexture(c);
 
-  t.colorSpace=
+  texture.colorSpace=
     THREE.SRGBColorSpace;
 
-  return t;
+  return texture;
 }
-
-/* =========================================================
-   CREATE SYSTEM
-   ========================================================= */
-
-PLANETS.forEach(createPlanet);
-
-MOONS.forEach(createMoon);
 
 /* =========================================================
    ASTEROID BELT
@@ -2141,7 +2725,11 @@ MOONS.forEach(createMoon);
 const asteroidGroup=
   new THREE.Group();
 
-for(let i=0;i<700;i++){
+for(
+  let i=0;
+  i<900;
+  i++
+){
 
   const a=
     Math.random()*
@@ -2155,46 +2743,69 @@ for(let i=0;i<700;i++){
     (Math.random()-.5)*2;
 
   const s=
-    .05+
+    .04+
     Math.random()*.15;
 
-  const mesh=
+  const asteroid=
     new THREE.Mesh(
+
       new THREE.IcosahedronGeometry(
-        s,0
+        s,
+        0
       ),
+
       new THREE.MeshStandardMaterial({
-        color:0x706b63,
+        color:0x77716a,
         roughness:1
       })
+
     );
 
-  mesh.position.set(
+  asteroid.position.set(
+
     Math.cos(a)*r,
+
     y,
+
     Math.sin(a)*r
+
   );
 
-  asteroidGroup.add(mesh);
+  asteroidGroup.add(
+    asteroid
+  );
 }
 
-scene.add(asteroidGroup);
+scene.add(
+  asteroidGroup
+);
 
 /* =========================================================
-   SELECTION
+   SELECTION RING
    ========================================================= */
 
 const selectionRing=
   new THREE.Mesh(
+
     new THREE.RingGeometry(
-      1.05,1.12,64
+      1.05,
+      1.12,
+      64
     ),
+
     new THREE.MeshBasicMaterial({
+
       color:0x58c8ff,
+
       transparent:true,
+
       opacity:.85,
-      side:THREE.DoubleSide
+
+      side:
+        THREE.DoubleSide
+
     })
+
   );
 
 selectionRing.rotation.x=
@@ -2202,11 +2813,19 @@ selectionRing.rotation.x=
 
 selectionRing.visible=false;
 
-scene.add(selectionRing);
+scene.add(
+  selectionRing
+);
 
 let selectedKey=null;
 
-function getWorldPosition(key){
+/* =========================================================
+   WORLD POSITION
+   ========================================================= */
+
+function getWorldPosition(
+  key
+){
 
   if(key==="Sun")
     return sun.position.clone();
@@ -2238,6 +2857,10 @@ function getWorldPosition(key){
   return null;
 }
 
+/* =========================================================
+   CAMERA FOCUS
+   ========================================================= */
+
 function focusBody(key){
 
   const p=
@@ -2247,23 +2870,32 @@ function focusBody(key){
 
   const radius=
     key==="Sun"
-      ? 12
-      : bodies[key]
-        ? bodies[key].cfg.radius
-        : satellites[key].cfg.radius;
+      ?12
+      :bodies[key]
+        ?bodies[key].cfg.radius
+        :satellites[key].cfg.radius;
 
   const direction=
     camera.position
       .clone()
-      .sub(controls.target)
+      .sub(
+        controls.target
+      )
       .normalize();
 
   camera.position.copy(
+
     p.clone().add(
+
       direction.multiplyScalar(
-        Math.max(radius*5,12)
+        Math.max(
+          radius*5,
+          12
+        )
       )
+
     )
+
   );
 
   controls.target.copy(p);
@@ -2298,15 +2930,17 @@ renderer.domElement.addEventListener(
       sun
     ];
 
-    Object.values(bodies)
-      .forEach(
-        x=>targets.push(x.mesh)
-      );
+    Object.values(
+      bodies
+    ).forEach(
+      x=>targets.push(x.mesh)
+    );
 
-    Object.values(satellites)
-      .forEach(
-        x=>targets.push(x.mesh)
-      );
+    Object.values(
+      satellites
+    ).forEach(
+      x=>targets.push(x.mesh)
+    );
 
     const hits=
       raycaster.intersectObjects(
@@ -2335,7 +2969,7 @@ renderer.domElement.addEventListener(
 );
 
 /* =========================================================
-   SELECT
+   SELECT BODY
    ========================================================= */
 
 function selectBody(key){
@@ -2351,16 +2985,18 @@ function selectBody(key){
 
   const radius=
     key==="Sun"
-      ? 12
-      : bodies[key]
-        ? bodies[key].cfg.radius
-        : satellites[key].cfg.radius;
+      ?12
+      :bodies[key]
+        ?bodies[key].cfg.radius
+        :satellites[key].cfg.radius;
 
   selectionRing.scale.setScalar(
     radius*1.35
   );
 
-  selectionRing.position.copy(p);
+  selectionRing.position.copy(
+    p
+  );
 
   focusBody(key);
 
@@ -2370,12 +3006,13 @@ function selectBody(key){
 }
 
 /* =========================================================
-   INFO
+   INFO PANEL
    ========================================================= */
 
 function openInfo(key){
 
-  const d=DATA[key];
+  const d=
+    DATA[key];
 
   if(!d)return;
 
@@ -2391,84 +3028,79 @@ function openInfo(key){
     "infoSubtitle"
   ).textContent=
     currentLanguage==="hi"
-      ? (
-          TYPE_HI[d.type] ||
-          d.type
-        )
-      : d.type;
+      ?TYPE_HI[d.type]||d.type
+      :d.type;
 
   document.getElementById(
     "objectId"
   ).textContent=
-    JPL_IDS[key] || "—";
+    JPL_IDS[key]||"—";
 
   document.getElementById(
     "distance"
-  ).textContent=d.distance;
+  ).textContent=
+    d.distance;
 
   document.getElementById(
     "period"
-  ).textContent=d.period;
+  ).textContent=
+    d.period;
 
   document.getElementById(
     "orbitType"
-  ).textContent=d.orbit;
+  ).textContent=
+    d.orbit;
 
   document.getElementById(
     "system"
-  ).textContent=d.parent;
+  ).textContent=
+    d.parent;
 
   document.getElementById(
     "diameter"
-  ).textContent=d.diameter;
+  ).textContent=
+    d.diameter;
 
   document.getElementById(
     "gravity"
-  ).textContent=d.gravity;
+  ).textContent=
+    d.gravity;
 
   document.getElementById(
     "mass"
-  ).textContent=d.mass;
+  ).textContent=
+    d.mass;
 
   document.getElementById(
     "bodyType"
   ).textContent=
     currentLanguage==="hi"
-      ? (
-          TYPE_HI[d.type] ||
-          d.type
-        )
-      : d.type;
+      ?TYPE_HI[d.type]||d.type
+      :d.type;
 
   document.getElementById(
     "weather"
   ).textContent=
     currentLanguage==="hi"
-      ? (
-          DATA_HI[key]?.weather ||
-          d.atmosphere
-        )
-      : d.atmosphere;
+      ?DATA_HI[key]?.weather||
+       d.atmosphere
+      :d.atmosphere;
 
   document.getElementById(
     "history"
   ).textContent=
     currentLanguage==="hi"
-      ? (
-          DATA_HI[key]?.history ||
-          d.history
-        )
-      : d.history;
+      ?DATA_HI[key]?.history||
+       d.history
+      :d.history;
 
   document.getElementById(
     "fact"
   ).textContent=
     currentLanguage==="hi"
-      ? (
-          DATA_HI[key]?.fact ||
-          d.fact
-        )
-      : d.fact;
+      ?DATA_HI[key]?.fact||
+       d.fact
+      :d.fact;
 
   document.getElementById(
     "lastUpdate"
@@ -2477,13 +3109,14 @@ function openInfo(key){
   document.getElementById(
     "ephemeris"
   ).textContent=
-    TEXT[currentLanguage].fallback;
+    TEXT[currentLanguage]
+      .fallback;
 
   setJPLStatus(false);
 }
 
 /* =========================================================
-   JPL IDS
+   JPL
    ========================================================= */
 
 const JPL_IDS={
@@ -2550,11 +3183,9 @@ Charon:"999"
 
 };
 
-/* =========================================================
-   JPL STATUS
-   ========================================================= */
-
-function setJPLStatus(live){
+function setJPLStatus(
+  live
+){
 
   const el=
     document.getElementById(
@@ -2564,9 +3195,7 @@ function setJPLStatus(live){
   if(live){
 
     el.textContent=
-      currentLanguage==="hi"
-        ? "NASA / JPL LIVE EPHEMERIS"
-        : "NASA / JPL LIVE EPHEMERIS";
+      "NASA / JPL LIVE EPHEMERIS";
 
     el.className=
       "liveStatus live";
@@ -2582,11 +3211,9 @@ function setJPLStatus(live){
   }
 }
 
-/* =========================================================
-   JPL HORIZONS
-   ========================================================= */
-
-async function fetchJPL(key){
+async function fetchJPL(
+  key
+){
 
   const id=
     JPL_IDS[key];
@@ -2594,7 +3221,8 @@ async function fetchJPL(key){
   if(!id)return;
 
   const center=
-    CENTER_IDS[key] || "10";
+    CENTER_IDS[key]||
+    "10";
 
   const iso=
     new Date()
@@ -2646,7 +3274,8 @@ async function fetchJPL(key){
 
     if(!response.ok)
       throw new Error(
-        "HTTP "+response.status
+        "HTTP "+
+        response.status
       );
 
     const json=
@@ -2683,47 +3312,47 @@ async function fetchJPL(key){
       const parts=
         line.split(",");
 
-      if(parts.length>1){
+      const last=
+        parts[
+          parts.length-1
+        ]?.trim();
 
-        const last=
-          parts[
-            parts.length-1
-          ].trim();
+      const num=
+        parseFloat(last);
 
-        const num=
-          parseFloat(last);
+      if(
+        Number.isFinite(num)
+      ){
 
-        if(Number.isFinite(num)){
-
-          rangeText=
-            num.toLocaleString(
-              "en-US",
-              {
-                maximumFractionDigits:2
-              }
-            )+" km";
-        }
+        rangeText=
+          num.toLocaleString(
+            "en-US",
+            {
+              maximumFractionDigits:2
+            }
+          )+
+          " km";
       }
     }
 
     if(
       rangeText &&
-      DATA[key]
-    ){
-
-      if(
+      DATA[key] &&
+      (
         key==="Moon" ||
         satellites[key]
-      ){
+      )
+    ){
 
-        DATA[key].distance=
-          rangeText+
-          " from "+
-          DATA[key].parent;
-      }
+      DATA[key].distance=
+        rangeText+
+        " from "+
+        DATA[key].parent;
     }
 
-    if(selectedKey===key){
+    if(
+      selectedKey===key
+    ){
 
       if(rangeText){
 
@@ -2759,20 +3388,20 @@ async function fetchJPL(key){
   }catch(error){
 
     console.warn(
-      "JPL Horizons fallback:",
+      "JPL fallback:",
       error
     );
 
-    if(selectedKey===key){
+    if(
+      selectedKey===key
+    ){
 
       setJPLStatus(false);
 
       document.getElementById(
         "ephemeris"
       ).textContent=
-        currentLanguage==="hi"
-          ? "NASA/JPL fallback"
-          : "NASA/JPL fallback";
+        "NASA/JPL fallback";
     }
 
     document.getElementById(
@@ -2784,7 +3413,7 @@ async function fetchJPL(key){
 }
 
 /* =========================================================
-   LANGUAGE SWITCH
+   LANGUAGE
    ========================================================= */
 
 function applyLanguage(){
@@ -2794,8 +3423,8 @@ function applyLanguage(){
 
   document.documentElement.lang=
     currentLanguage==="hi"
-      ? "hi"
-      : "en";
+      ?"hi"
+      :"en";
 
   document.getElementById(
     "brandSubtitle"
@@ -2938,8 +3567,8 @@ function applyLanguage(){
       "soundState"
     ).textContent=
       audioCtx.state==="running"
-        ? t.soundOn
-        : t.soundOff;
+        ?t.soundOn
+        :t.soundOff;
 
   }else{
 
@@ -2960,57 +3589,39 @@ function applyLanguage(){
         "infoSubtitle"
       ).textContent=
         currentLanguage==="hi"
-          ? (
-              TYPE_HI[d.type] ||
-              d.type
-            )
-          : d.type;
+          ?TYPE_HI[d.type]||d.type
+          :d.type;
 
       document.getElementById(
         "bodyType"
       ).textContent=
         currentLanguage==="hi"
-          ? (
-              TYPE_HI[d.type] ||
-              d.type
-            )
-          : d.type;
+          ?TYPE_HI[d.type]||d.type
+          :d.type;
 
       document.getElementById(
         "weather"
       ).textContent=
         currentLanguage==="hi"
-          ? (
-              DATA_HI[
-                selectedKey
-              ]?.weather ||
-              d.atmosphere
-            )
-          : d.atmosphere;
+          ?DATA_HI[selectedKey]?.weather||
+           d.atmosphere
+          :d.atmosphere;
 
       document.getElementById(
         "history"
       ).textContent=
         currentLanguage==="hi"
-          ? (
-              DATA_HI[
-                selectedKey
-              ]?.history ||
-              d.history
-            )
-          : d.history;
+          ?DATA_HI[selectedKey]?.history||
+           d.history
+          :d.history;
 
       document.getElementById(
         "fact"
       ).textContent=
         currentLanguage==="hi"
-          ? (
-              DATA_HI[
-                selectedKey
-              ]?.fact ||
-              d.fact
-            )
-          : d.fact;
+          ?DATA_HI[selectedKey]?.fact||
+           d.fact
+          :d.fact;
     }
   }
 
@@ -3046,7 +3657,7 @@ document.querySelectorAll(
 });
 
 /* =========================================================
-   CONTROL PANEL
+   MENU
    ========================================================= */
 
 const menuBtn=
@@ -3073,11 +3684,13 @@ document.getElementById(
 ).addEventListener(
   "click",
   ()=>{
+
     document.getElementById(
       "infoPanel"
     ).classList.remove(
       "open"
     );
+
   }
 );
 
@@ -3136,13 +3749,21 @@ document.getElementById(
 document.getElementById(
   "zoomIn"
 ).onclick=()=>{
-  camera.position.multiplyScalar(.82);
+
+  camera.position.multiplyScalar(
+    .82
+  );
+
 };
 
 document.getElementById(
   "zoomOut"
 ).onclick=()=>{
-  camera.position.multiplyScalar(1.22);
+
+  camera.position.multiplyScalar(
+    1.22
+  );
+
 };
 
 /* =========================================================
@@ -3162,10 +3783,11 @@ document.getElementById(
   );
 
   controls.update();
+
 };
 
 /* =========================================================
-   AUDIO
+   DEEP SPACE AUDIO
    ========================================================= */
 
 let audioCtx=null;
@@ -3184,15 +3806,16 @@ function startAudio(){
   try{
 
     audioCtx=
-      new (
-        window.AudioContext ||
+      new(
+        window.AudioContext||
         window.webkitAudioContext
       )();
 
     master=
       audioCtx.createGain();
 
-    master.gain.value=.065;
+    master.gain.value=
+      .065;
 
     master.connect(
       audioCtx.destination
@@ -3209,8 +3832,13 @@ function startAudio(){
 
     bassGain.gain.value=.55;
 
-    bass.connect(bassGain);
-    bassGain.connect(master);
+    bass.connect(
+      bassGain
+    );
+
+    bassGain.connect(
+      master
+    );
 
     harmonic=
       audioCtx.createOscillator();
@@ -3223,8 +3851,13 @@ function startAudio(){
 
     harmGain.gain.value=.16;
 
-    harmonic.connect(harmGain);
-    harmGain.connect(master);
+    harmonic.connect(
+      harmGain
+    );
+
+    harmGain.connect(
+      master
+    );
 
     const lfo=
       audioCtx.createOscillator();
@@ -3236,7 +3869,10 @@ function startAudio(){
 
     lfoGain.gain.value=5;
 
-    lfo.connect(lfoGain);
+    lfo.connect(
+      lfoGain
+    );
+
     lfoGain.connect(
       bass.frequency
     );
@@ -3256,30 +3892,46 @@ function startAudio(){
       i<data.length;
       i++
     ){
+
       data[i]=
         Math.random()*2-1;
+
     }
 
     const noise=
       audioCtx.createBufferSource();
 
-    noise.buffer=buffer;
+    noise.buffer=
+      buffer;
+
     noise.loop=true;
 
     const filter=
       audioCtx.createBiquadFilter();
 
-    filter.type="lowpass";
-    filter.frequency.value=500;
+    filter.type=
+      "lowpass";
+
+    filter.frequency.value=
+      500;
 
     noiseGain=
       audioCtx.createGain();
 
-    noiseGain.gain.value=.018;
+    noiseGain.gain.value=
+      .018;
 
-    noise.connect(filter);
-    filter.connect(noiseGain);
-    noiseGain.connect(master);
+    noise.connect(
+      filter
+    );
+
+    filter.connect(
+      noiseGain
+    );
+
+    noiseGain.connect(
+      master
+    );
 
     bass.start();
     harmonic.start();
@@ -3294,16 +3946,12 @@ function startAudio(){
 
   }catch(err){
 
-    console.warn(
-      "Audio unavailable",
-      err
-    );
-
     document.getElementById(
       "soundState"
     ).textContent=
       TEXT[currentLanguage]
         .soundUnavailable;
+
   }
 }
 
@@ -3349,6 +3997,7 @@ document.getElementById(
         TEXT[currentLanguage]
           .soundOn;
     }
+
   }
 );
 
@@ -3380,7 +4029,7 @@ function updateLabels(){
   ){
 
     const parent=
-      item.group ||
+      item.group||
       item.holder;
 
     if(!parent)continue;
@@ -3393,12 +4042,16 @@ function updateLabels(){
     const pos=
       new THREE.Vector3();
 
-    parent.getWorldPosition(pos);
+    parent.getWorldPosition(
+      pos
+    );
 
-    pos.y +=
+    pos.y+=
       item.cfg.radius+1;
 
-    pos.project(camera);
+    pos.project(
+      camera
+    );
 
     const x=
       (pos.x*.5+.5)*
@@ -3415,16 +4068,18 @@ function updateLabels(){
       `${y}px`;
 
     label.style.display=
-      pos.z>-1 &&
+      pos.z>-1&&
       pos.z<1
-        ? "block"
-        : "none";
+        ?"block"
+        :"none";
   }
 
   const p=
     sun.position
       .clone()
-      .project(camera);
+      .project(
+        camera
+      );
 
   sunLabel.style.left=
     `${(p.x*.5+.5)*innerWidth}px`;
@@ -3438,18 +4093,33 @@ function updateLabels(){
    ========================================================= */
 
 const sunLabel=
-  document.createElement("div");
+  document.createElement(
+    "div"
+  );
 
-sunLabel.textContent="Sun";
+sunLabel.textContent=
+  "Sun";
 
-sunLabel.style.position="fixed";
-sunLabel.style.color="white";
-sunLabel.style.fontSize="11px";
-sunLabel.style.padding="3px 6px";
-sunLabel.style.borderRadius="7px";
+sunLabel.style.position=
+  "fixed";
+
+sunLabel.style.color=
+  "white";
+
+sunLabel.style.fontSize=
+  "11px";
+
+sunLabel.style.padding=
+  "3px 6px";
+
+sunLabel.style.borderRadius=
+  "7px";
+
 sunLabel.style.background=
   "rgba(0,0,0,.4)";
-sunLabel.style.pointerEvents="none";
+
+sunLabel.style.pointerEvents=
+  "none";
 
 document.body.appendChild(
   sunLabel
@@ -3483,9 +4153,10 @@ function animate(now){
       Object.values(bodies)
     ){
 
-      const cfg=item.cfg;
+      const cfg=
+        item.cfg;
 
-      item.angle +=
+      item.angle+=
         cfg.speed*
         dt*
         60*
@@ -3494,14 +4165,16 @@ function animate(now){
       item.group.position.x=
         Math.cos(
           item.angle
-        )*cfg.orbit;
+        )*
+        cfg.orbit;
 
       item.group.position.z=
         Math.sin(
           item.angle
-        )*cfg.orbit;
+        )*
+        cfg.orbit;
 
-      item.mesh.rotation.y +=
+      item.mesh.rotation.y+=
         .004*
         dt*
         60*
@@ -3513,9 +4186,10 @@ function animate(now){
       Object.values(satellites)
     ){
 
-      const cfg=item.cfg;
+      const cfg=
+        item.cfg;
 
-      item.angle +=
+      item.angle+=
         cfg.speed*
         dt*
         60*
@@ -3524,25 +4198,34 @@ function animate(now){
       item.holder.position.x=
         Math.cos(
           item.angle
-        )*cfg.orbit;
+        )*
+        cfg.orbit;
 
       item.holder.position.z=
         Math.sin(
           item.angle
-        )*cfg.orbit;
+        )*
+        cfg.orbit;
 
-      item.mesh.rotation.y +=
+      item.mesh.rotation.y+=
         .007*
         dt*
         60*
         speed;
     }
 
-    sun.rotation.y +=
+    sun.rotation.y+=
       .0015*
       dt*
       60*
       speed;
+
+    /* very slow star-field movement */
+
+    starGroup.rotation.y+=
+      .000003*
+      dt*
+      60;
   }
 
   if(selectedKey){
@@ -3590,6 +4273,7 @@ window.addEventListener(
       innerWidth,
       innerHeight
     );
+
   }
 );
 
